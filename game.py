@@ -1,5 +1,6 @@
 # game.py
 
+
 print("Rock, Paper, Scissors, SHOOT!")  # this is also a comment
 
 # 1.Capture Inputs
