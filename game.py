@@ -13,11 +13,19 @@ print("You chose:", user_choice)
 
 # 2.VALIDATE INPUTS
 
-if user_choice in ["rock", "paper", "scissors"]:
-    print("VALID!")
-else:
+#version 1 of validation
+#if user_choice in ["rock", "paper", "scissors"]:
+#    #print("VALID!")
+#    pass
+#else:
+#    print ("Invalid Selection, Please try this again!")
+#    exit()
+
+#simplified version of validation
+if user_choice not in ["rock", "paper", "scissors"]:
     print ("Invalid Selection, Please try this again!")
     exit()
+
 
 
 # Generate COmputer selection
