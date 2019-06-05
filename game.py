@@ -2,19 +2,29 @@
 
 print("Rock, Paper, Scissors, SHOOT!")  # this is also a comment
 
-# Capture Inputs
+# 1.Capture Inputs
 
 user_choice = input("Please choose one of the following options: 'rock', 'paper', or 'scissors' (without the quotes):")
 
 print("------------")
 print("You chose:", user_choice)
-print("------------")
+#print("------------")
 
-# VALIDATE INPUTS
+
+# 2.VALIDATE INPUTS
+
+if user_choice in ["rock", "paper", "scissors"]:
+    print("VALID!")
+else:
+    print ("Invalid Selection, Please try this again!")
+    exit()
 
 
 # Generate COmputer selection
 
+
+
+print("Generating...")
 
 # Determine the winer
 
