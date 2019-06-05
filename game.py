@@ -1,5 +1,6 @@
 # game.py
 
+import random
 
 print("Rock, Paper, Scissors, SHOOT!")  # this is also a comment
 
@@ -7,9 +8,9 @@ print("Rock, Paper, Scissors, SHOOT!")  # this is also a comment
 
 user_choice = input("Please choose one of the following options: 'rock', 'paper', or 'scissors' (without the quotes):")
 
-print("------------")
+print("-----------------")
 print("You chose:", user_choice)
-#print("------------")
+#print("-----------------")
 
 
 # 2.VALIDATE INPUTS
@@ -23,19 +24,24 @@ print("You chose:", user_choice)
 #    exit()
 
 #simplified version of validation
-if user_choice not in ["rock", "paper", "scissors"]:
+
+options = ["rock", "paper", "scissors"]
+if user_choice not in options:
     print ("Invalid Selection, Please try this again!")
     exit()
 
 
+# Generate Computer selection
 
-# Generate COmputer selection
+computer_choice = random.choice(options)
 
-
-
+print("-----------------")
 print("Generating...")
+print("Computer chose:", computer_choice)
+
 
 # Determine the winer
+
 
 
 
