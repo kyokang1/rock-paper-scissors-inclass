@@ -31,21 +31,86 @@ if user_choice not in options:
     exit()
 
 
-# Generate Computer selection
+# 3.Generate Computer selection
 
 computer_choice = random.choice(options)
+
+#override for test
+#user_choice="rock"
+#computer_choice="rock"
+
 
 print("-----------------")
 print("Generating...")
 print("Computer chose:", computer_choice)
 
 
-# Determine the winer
+# 4.Determine the winer
+
+# rock beats scissors
+# scissor beats papers
+# paer beats rocks
+# same selection is a tie
+
+
+#if user_choice == computer_choice:
+#    print("TIE!")
+#
+#elif user_choice == "rock" and computer_choice == "paper":
+#
+##complicated way to show winner
+##    print("Winner is paper")
+##    print("Computer wins")
+#elif user_choice == "rock" and computer_choice == "scissors":
+#    print("Rock")
+#
+#elif user_choice == "paper" and computer_choice == "rock":
+#    print("paper")
+#elif user_choice == "paper" and computer_choice == "scissors":
+#    print("scissors")
+#
+#elif user_choice == "scissors" and computer_choice == "rock":
+#    print("rock")
+#elif user_choice == "scissors" and computer_choice == "paper":
+#    print("scissors")
 
 
 
+#In-class working version
 
-# Display final outputs/outcomes
+# first attribute represents the user, second represents the computer
+winners = {
+    "rock":{
+        "rock": None,
+        "paper": "paper",
+        "scissors": "rock",
+    },
+    "paper":{
+        "rock": "paper",
+        "paper": None,
+        "scissors": "scissors",
+    },
+    "scissors":{
+        "rock": "rock",
+        "paper": "scissors",
+        "scissors": None,
+    },
+}
+
+winning_choice = winners[user_choice][computer_choice]
+
+# 5.DISPLAY FINAL OUTPUTS / OUTCOMES
+
+if winning_choice:
+    if winning_choice == user_choice:
+        print("YOU WON")
+    elif winning_choice == computer_choice:
+        print("YOU LOST")
+else:
+    print("TIE")
+
+print("Thanks for playing. Please play again!")
+
 
 
 
