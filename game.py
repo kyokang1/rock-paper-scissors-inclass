@@ -117,48 +117,48 @@ if __name__ == "__main__":
     #    print("You win")
 
     # Version 2 - Alternative way
-    if user_choice == computer_choice:
-        winning_choice = None   # result = tie
-    else: 
-        choices = [user_choice, computer_choice]    # choices: order does not matter
-        choices.sort()  # .sort() arrays the choices in ascending order in alphabet. rock -> paper -> scissors
-
-        # works
-        if choices == ["paper", "rock"]:
-            winning_choice = "paper"
-        elif choices == ["paper", "scissors"]:
-            winning_choice = "scissors"
-        elif choices == ["scissors", "rock"]:
-            winning_choice = "rock"
-
-        # does not work
-        #if choices == ["paper", "rock"]:
-        #    winning_choice = "paper"
-        #elif choices == ["scissors", "paper"]:  # if "scissors" comes first, this does not work. Logically, it is right.
-        #    winning_choice = "scissors"
-        #elif choices == ["rock", "scissors"]:
-        #    winning_choice = "rock"
+    #if user_choice == computer_choice:
+    #    winning_choice = None   # result = tie
+    #else: 
+    #    choices = [user_choice, computer_choice]    # choices: order does not matter
+    #    choices.sort()  # .sort() arrays the choices in ascending order in alphabet. rock -> paper -> scissors
+#
+    #    # works
+    #    if choices == ["paper", "rock"]:
+    #        winning_choice = "paper"
+    #    elif choices == ["paper", "scissors"]:
+    #        winning_choice = "scissors"
+    #    elif choices == ["scissors", "rock"]:
+    #        winning_choice = "rock"
+#
+    #    # does not work
+    #    #if choices == ["paper", "rock"]:
+    #    #    winning_choice = "paper"
+    #    #elif choices == ["scissors", "paper"]:  # if "scissors" comes first, this does not work. Logically, it is right.
+    #    #    winning_choice = "scissors"
+    #    #elif choices == ["rock", "scissors"]:
+    #    #    winning_choice = "rock"
 
     # Version 3 - Define winning choice with dictionary 
-    # first attribute represents the user, second represents the computer
-    #winners = {
-    #        "rock":{
-    #            "rock": None,
-    #            "paper": "paper",
-    #            "scissors": "rock",
-    #        },
-    #    "paper":{
-    #            "rock": "paper",
-    #            "paper": None,
-    #            "scissors": "scissors",
-    #        },
-    #    "scissors":{
-    #            "rock": "rock",
-    #            "paper": "scissors",
-    #            "scissors": None,
-    #        },
-    #    }       
-    #winning_choice = winners[user_choice][computer_choice]
+     first attribute represents the user, second represents the computer
+    winners = {
+            "rock":{
+                "rock": None,
+                "paper": "paper",
+                "scissors": "rock",
+            },
+        "paper":{
+                "rock": "paper",
+                "paper": None,
+                "scissors": "scissors",
+            },
+        "scissors":{
+                "rock": "rock",
+                "paper": "scissors",
+                "scissors": None,
+            },
+        }       
+    winning_choice = winners[user_choice][computer_choice]
 
 
     # ================================================================ #
