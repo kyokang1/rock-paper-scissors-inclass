@@ -5,9 +5,26 @@ import random
 def my_message():
     return "Hello"
 
-def determine_winner(u,c):
-    return "rock"
-
+def determine_winner(user_choice,computer_choice):
+    winners = {
+        "rock":{
+            "rock": None,   # TIE
+            "paper": "paper",
+            "scissors": "rock",
+        },
+        "paper":{
+            "rock": "paper",
+            "paper": None,  # TIE
+            "scissors": "scissors",
+        },
+        "scissors":{
+            "rock": "rock",
+            "paper": "scissors",
+            "scissors": None,   # TIE
+        },
+    }
+    winning_choice = winners[user_choice][computer_choice]
+    return winning_choice
 
 # Only if this scrip t is executed from the command-line
 if __name__ == "__main__": 
@@ -91,22 +108,22 @@ if __name__ == "__main__":
 
     # first attribute represents the user, second represents the computer
     winners = {
-        "rock":{
-            "rock": None,
-            "paper": "paper",
-            "scissors": "rock",
-        },
+            "rock":{
+                "rock": None,
+                "paper": "paper",
+                "scissors": "rock",
+            },
         "paper":{
-            "rock": "paper",
-            "paper": None,
-            "scissors": "scissors",
-        },
+                "rock": "paper",
+                "paper": None,
+                "scissors": "scissors",
+            },
         "scissors":{
-            "rock": "rock",
-            "paper": "scissors",
-            "scissors": None,
-        },
-    }
+                "rock": "rock",
+                "paper": "scissors",
+                "scissors": None,
+            },
+        }       
 
     winning_choice = winners[user_choice][computer_choice]
 
