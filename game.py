@@ -34,7 +34,7 @@ def determine_winner(user_choice,computer_choice):
     return winning_choice
 
 # Only if this scrip t is executed from the command-line
-if __name__ == "__main__": 
+if __name__ == "__main__":    # Kyoung - Not quite sure what this means!
 
 
     # ================================================================ #
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     # 1.Capture Inputs
 
     print("-----------------")
-    user_choice = input("Please choose one of the following options: 'rock', 'paper', or 'scissors' (without the quotes):")
+    user_choice = input("Please choose one of the following options: \n 'rock', \n 'paper', \n 'scissors' \n (without the quotes and all lower case) \n Choose:")
 
     print("-----------------")
     print("You chose:", user_choice)
@@ -120,6 +120,7 @@ if __name__ == "__main__":
     #    print("Winner is scissors")
     #    print("You win")
 
+    
     # Version 2 - Alternative way
     #if user_choice == computer_choice:
     #    winning_choice = None   # result = tie
@@ -143,6 +144,7 @@ if __name__ == "__main__":
     #    #elif choices == ["rock", "scissors"]:
     #    #    winning_choice = "rock"
 
+    
     # Version 3 - Define winning choice with dictionary 
     #first attribute represents the user, second represents the computer
     winners = {
