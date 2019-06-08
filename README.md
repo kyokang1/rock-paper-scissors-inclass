@@ -1,4 +1,4 @@
-# ReadMe of rock
+# READMe of Rock-Paper-Scissors Exercise
 
 TODO - Describe the codes..
 
