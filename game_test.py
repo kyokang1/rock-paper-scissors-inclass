@@ -7,6 +7,11 @@
 
 from game import my_message, determine_winner     #determine_winner
 
+def test_my_example():
+    assert 3 == 3
+
+
+
 def test_my_message():
     #with variable
     x = my_message()
