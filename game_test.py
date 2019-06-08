@@ -5,18 +5,21 @@
 
 # game_test.py
 
-from game import my_message     #determine_winner
+from game import my_message, determine_winner     #determine_winner
 
 def test_my_message():
+    #with variable
     x = my_message()
     print(x)
-    assert x == "Hello"
-
+    assert x == "Hello"#
     #without variable
     assert my_message() == "Hello"
 
+
+def test_determine_winner():
+  
+    assert determine_winner("rock","scissors") == "rock"
 #
-#def test_determination_of_the_winner():
 #    assert determine_winner("rock", "rock") == None # represents a tie
 #    assert determine_winner("rock", "paper") == "paper"
 #    assert determine_winner("rock", "scissors") == "rock"
