@@ -39,17 +39,19 @@ if __name__ == "__main__":
 
     # ================================================================ #
     # 0.Starting
+    print("")
+    print("=========================================================================")
     print("Rock, Paper, Scissors, SHOOT!")  # this is also a comment
 
 
     # ================================================================ #
     # 1.Capture Inputs
 
+    print("-----------------")
     user_choice = input("Please choose one of the following options: 'rock', 'paper', or 'scissors' (without the quotes):")
 
     print("-----------------")
     print("You chose:", user_choice)
-    #print("-----------------")
 
 
     # ================================================================ #
@@ -66,9 +68,12 @@ if __name__ == "__main__":
     # Validation version 2 - simplified version
     options = ["rock", "paper", "scissors"]
     if user_choice not in options:
+        print("-----------------")
         print ("Invalid Selection, Please try this again!")
+        print("=========================================================================")
+        print("")
         exit()
-
+    
 
     # ================================================================ #
     # 3.Generate Computer selection
@@ -82,8 +87,7 @@ if __name__ == "__main__":
     print("-----------------")
     print("Generating...")
     print("Computer chose:", computer_choice)
-
-
+ 
     # ================================================================ #
     # 4.Determine the winer
 
@@ -140,7 +144,7 @@ if __name__ == "__main__":
     #    #    winning_choice = "rock"
 
     # Version 3 - Define winning choice with dictionary 
-     first attribute represents the user, second represents the computer
+    #first attribute represents the user, second represents the computer
     winners = {
             "rock":{
                 "rock": None,
@@ -165,6 +169,7 @@ if __name__ == "__main__":
     # 5.DISPLAY FINAL OUTPUTS / OUTCOMES
 
     # For Vesrion 2&3
+    print("-----------------")
     if winning_choice:
         if winning_choice == user_choice:
             print("YOU WON")
@@ -177,4 +182,7 @@ if __name__ == "__main__":
     # ================================================================ #
     # 6.Closing
 
+    print("-----------------")
     print("Thanks for playing. Please play again!")
+    print("=========================================================================")
+    print("")
