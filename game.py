@@ -164,7 +164,7 @@ if __name__ == "__main__":    # Kyoung - Not quite sure what this means!
                 "scissors": None,
             },
         }       
-    winning_choice = winners[user_choice][computer_choice]
+    winning_choice = winners[user_choice][computer_choice]  # Not sure what it means...
 
 
     # ================================================================ #

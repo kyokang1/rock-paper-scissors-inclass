@@ -2,11 +2,11 @@
 
 from game import my_example, my_message, determine_winner     #determine_winner
 
-# Test 1
+# pytest 1 - example
 def test_my_example():
     assert 3 == 3
 
-# Test 2
+# pytest 2 - message
 def test_my_message():
     #with variable
     x = my_message()
@@ -15,7 +15,7 @@ def test_my_message():
     #without variable
     assert my_message() == "Hello"
 
-# Test 3
+# pytest 3 - determine winner
 def test_determine_winner():
   
 #    assert determine_winner("rock","scissors") == "rock" # for testing
